@@ -1,0 +1,942 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #070c14;
+    color: #f5f7fb;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.ust {
+    min-height: 32px;
+    padding: 8px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: #03070c;
+    border-bottom: 1px solid #1a2535;
+    color: #aeb9ca;
+    font-size: 10px;
+}
+
+.bosh {
+    height: 76px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #09111d;
+    border-bottom: 1px solid #1b293b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #4485ff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav a {
+    color: #aab6c8;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.nav a:hover,
+.nav .faol {
+    color: #4a8aff;
+}
+
+.amallar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.amallar input {
+    width: 180px;
+    height: 37px;
+    padding: 0 12px;
+    outline: none;
+    color: white;
+    background: #101b2a;
+    border: 1px solid #26364c;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+.amallar input:focus {
+    border-color: #4485ff;
+}
+
+.amallar button {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 8px;
+    background: #132034;
+    border: 1px solid #26364c;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.amallar button:hover {
+    background: #214c8d;
+}
+
+.amallar button b {
+    color: #6da0ff;
+    font-size: 11px;
+}
+
+.qahramon {
+    min-height: 440px;
+    margin: 0 3%;
+    padding: 45px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 75% 50%, #23364d, #101a29 45%, #080e17 80%);
+    border-bottom: 1px solid #1b293b;
+}
+
+.matn {
+    position: relative;
+    z-index: 2;
+}
+
+.belgi {
+    display: inline-block;
+    padding: 7px 12px;
+    background: #302419;
+    border: 1px solid #694621;
+    border-radius: 20px;
+    color: #ffcf76;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.matn h1 {
+    margin: 20px 0 15px;
+    font-size: clamp(36px, 4.5vw, 58px);
+    line-height: 1.06;
+    letter-spacing: -2px;
+}
+
+.matn h1 span {
+    color: #4788ff;
+}
+
+.matn p {
+    max-width: 440px;
+    color: #9eacc0;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.tugmalar {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.asosiy,
+.ikkinchi {
+    min-height: 43px;
+    padding: 13px 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.asosiy {
+    background: #367cff;
+    box-shadow: 0 8px 25px #367cff30;
+}
+
+.asosiy:hover {
+    background: #6096ff;
+    transform: translateY(-3px);
+}
+
+.ikkinchi {
+    color: #d3dce9;
+    border: 1px solid #34445a;
+    background: #101a29;
+}
+
+.ikkinchi:hover {
+    border-color: #4485ff;
+    color: #70a2ff;
+}
+
+.rasm {
+    min-width: 0;
+    min-height: 320px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.rasm img {
+    width: 115%;
+    max-width: 600px;
+    height: 340px;
+    object-fit: contain;
+    transform: rotate(-12deg);
+    filter: drop-shadow(0 25px 22px #0009);
+    mix-blend-mode: screen;
+}
+
+.yorliq {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    padding: 14px;
+    display: grid;
+    place-items: center;
+    background: #101c2b;
+    border: 1px solid #344965;
+    border-radius: 50%;
+    color: #a9c8ff;
+    font-size: 9px;
+    text-align: center;
+    transform: rotate(10deg);
+}
+
+.yorliq strong {
+    color: #fff;
+    font-size: 20px;
+}
+
+.kategor {
+    margin: 22px 5% 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tanla {
+    min-height: 78px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    background: #0c1522;
+    border: 1px solid #1d2c40;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.tanla:hover,
+.tanla.faol {
+    background: #10213a;
+    border-color: #397cff;
+    transform: translateY(-2px);
+}
+
+.tanla:first-letter {
+    color: #78a8ff;
+}
+
+.tanla strong {
+    font-size: 12px;
+}
+
+.tanla small {
+    color: #8594a9;
+    font-size: 10px;
+}
+
+.bolim {
+    margin: 0 5% 50px;
+}
+
+.sarlavha {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.sarlavha h2 {
+    font-size: 25px;
+    letter-spacing: -.8px;
+}
+
+.sarlavha > span {
+    color: #8e9cb0;
+    font-size: 11px;
+}
+
+.mahsulotlar {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.karta {
+    min-width: 0;
+    padding: 12px;
+    position: relative;
+    overflow: hidden;
+    background: #0c1521;
+    border: 1px solid #1d2b3e;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.karta:hover {
+    transform: translateY(-5px);
+    border-color: #397cff;
+    box-shadow: 0 15px 30px #0004;
+}
+
+.karta img {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    background: #142235;
+    border-radius: 8px;
+    mix-blend-mode: screen;
+}
+
+.sevim {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background: #09111ddf;
+    border: 1px solid #39495d;
+    border-radius: 8px;
+    color: white;
+    font-size: 21px;
+}
+
+.sevim:hover {
+    color: #ff6482;
+    border-color: #ff6482;
+}
+
+.yorliq2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    padding: 6px 8px;
+    background: #347bff;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.yorliq2.yangi {
+    background: #16a878;
+}
+
+.yorliq2.chegirma {
+    background: #ed475d;
+}
+
+.karta h3 {
+    margin: 4px 0 7px;
+    font-size: 14px;
+}
+
+.karta p {
+    color: #8e9db1;
+    font-size: 10px;
+}
+
+.past {
+    margin: 17px 0 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.past strong {
+    color: #ff6578;
+    font-size: 17px;
+}
+
+.past span {
+    color: #f2c66d;
+    font-size: 10px;
+}
+
+.qosh {
+    width: 100%;
+    min-height: 39px;
+    background: #142742;
+    border: 1px solid #294b77;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.qosh:hover {
+    background: #367cff;
+    border-color: #367cff;
+}
+
+.yonma {
+    margin: 0 5% 45px;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 20px;
+}
+
+.brendlar,
+.obuna {
+    min-width: 0;
+    padding: 22px;
+    background: #0c1521;
+    border: 1px solid #1d2b3e;
+    border-radius: 12px;
+}
+
+.brendlar .sarlavha {
+    margin-bottom: 18px;
+}
+
+.brendlar .sarlavha h2 {
+    font-size: 20px;
+}
+
+.brendlar .sarlavha a {
+    color: #6d9fff;
+    font-size: 11px;
+}
+
+.brendgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.brendgrid div {
+    min-height: 65px;
+    display: grid;
+    place-items: center;
+    background: #111e2f;
+    border: 1px solid #24354b;
+    border-radius: 8px;
+    color: #e4eaf4;
+    font-size: 16px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.brendgrid div:hover {
+    border-color: #4485ff;
+    color: #72a3ff;
+}
+
+.obuna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(circle at 100% 100%, #193c70, #0d1a2b 65%);
+}
+
+.obuna > span {
+    color: #70a4ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.obuna h2 {
+    margin: 14px 0 10px;
+    font-size: 32px;
+}
+
+.obuna h2 b {
+    color: #4788ff;
+}
+
+.obuna p {
+    margin-bottom: 18px;
+    color: #9baac0;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.obuna form {
+    display: flex;
+    gap: 6px;
+    padding: 5px;
+    background: #080f19;
+    border: 1px solid #2a3f5a;
+    border-radius: 8px;
+}
+
+.obuna input {
+    width: 100%;
+    min-width: 0;
+    padding: 9px;
+    outline: none;
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 10px;
+}
+
+.obuna button {
+    width: 40px;
+    min-width: 40px;
+    background: #347cff;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+.afzallik {
+    margin: 0 5% 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.afzallik div {
+    min-height: 100px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    background: #0c1521;
+    border: 1px solid #1d2b3e;
+    border-radius: 10px;
+}
+
+.afzallik div:first-letter {
+    font-size: 20px;
+}
+
+.afzallik strong {
+    font-size: 11px;
+}
+
+.afzallik small {
+    color: #8998ac;
+    font-size: 9px;
+}
+
+footer {
+    padding: 35px 5% 0;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    gap: 30px;
+    background: #080e17;
+    border-top: 1px solid #1d2a3b;
+}
+
+footer h4 {
+    margin: 7px 0 18px;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 12px 0;
+    color: #8998ad;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+footer > div:not(.oxiri):not(.footlogo) a {
+    display: block;
+    margin: 13px 0;
+    color: #9aa8bb;
+    font-size: 11px;
+}
+
+footer a:hover {
+    color: #5b96ff;
+}
+
+.oxiri {
+    grid-column: 1 / -1;
+    padding: 18px 0;
+    border-top: 1px solid #1d2a3b;
+    color: #738198;
+    font-size: 10px;
+}
+
+.xabar {
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    z-index: 50;
+    padding: 13px 20px;
+    background: #17345b;
+    border: 1px solid #397cff;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 15px);
+    transition: .3s;
+}
+
+.xabar.kor {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 1100px) {
+    .bosh {
+        gap: 15px;
+    }
+
+    .nav {
+        gap: 13px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .amallar input {
+        width: 145px;
+    }
+
+    .mahsulotlar {
+        gap: 10px;
+    }
+
+    .karta img {
+        height: 160px;
+    }
+
+    .yonma {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .ust {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ust span:nth-child(2) {
+        display: none;
+    }
+
+    .bosh {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px 4%;
+    }
+
+    .nav {
+        width: 100%;
+        order: 3;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .amallar {
+        margin-left: auto;
+    }
+
+    .qahramon {
+        min-height: 380px;
+        padding: 35px 4%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .matn h1 {
+        font-size: 39px;
+    }
+
+    .rasm img {
+        width: 125%;
+        height: 280px;
+    }
+
+    .kategor {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .tanla {
+        padding: 9px;
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .tanla strong,
+    .tanla small {
+        font-size: 10px;
+    }
+
+    .mahsulotlar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .karta img {
+        height: 210px;
+    }
+
+    .afzallik {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .ust {
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .ust span:last-child {
+        display: none;
+    }
+
+    .bosh {
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .amallar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .amallar input {
+        flex: 1;
+        width: 100%;
+    }
+
+    .qahramon {
+        margin: 0;
+        min-height: 570px;
+        padding: 30px 6%;
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+
+    .matn h1 {
+        font-size: 43px;
+    }
+
+    .matn p {
+        font-size: 12px;
+    }
+
+    .rasm {
+        min-height: 230px;
+        margin-top: -5px;
+    }
+
+    .rasm img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .yorliq {
+        right: 5%;
+        top: 5%;
+    }
+
+    .kategor {
+        margin: 15px 4% 35px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tanla {
+        min-height: 75px;
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .bolim,
+    .yonma {
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+
+    .sarlavha h2 {
+        font-size: 20px;
+    }
+
+    .sarlavha > span {
+        font-size: 9px;
+        text-align: right;
+    }
+
+    .karta {
+        padding: 8px;
+    }
+
+    .karta img {
+        height: 145px;
+        margin-bottom: 10px;
+    }
+
+    .karta h3 {
+        font-size: 12px;
+    }
+
+    .karta p {
+        font-size: 9px;
+    }
+
+    .past {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 12px 0;
+    }
+
+    .past strong {
+        font-size: 15px;
+    }
+
+    .qosh {
+        font-size: 9px;
+    }
+
+    .sevim {
+        top: 14px;
+        right: 14px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .yorliq2 {
+        top: 14px;
+        left: 14px;
+        font-size: 8px;
+    }
+
+    .brendlar,
+    .obuna {
+        padding: 15px;
+    }
+
+    .brendgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brendgrid div {
+        min-height: 55px;
+        font-size: 14px;
+    }
+
+    .obuna h2 {
+        font-size: 28px;
+    }
+
+    .afzallik {
+        margin: 0 4% 35px;
+        gap: 8px;
+    }
+
+    .afzallik div {
+        padding: 10px;
+        grid-template-columns: 28px 1fr;
+    }
+
+    .afzallik strong {
+        font-size: 9px;
+    }
+
+    .afzallik small {
+        font-size: 8px;
+    }
+
+    footer {
+        padding: 28px 4% 0;
+        gap: 20px 12px;
+    }
+
+    footer h4 {
+        font-size: 11px;
+    }
+
+    footer p,
+    footer > div:not(.oxiri):not(.footlogo) a {
+        font-size: 10px;
+    }
+
+    .footlogo {
+        grid-column: 1 / -1;
+    }
+
+    .oxiri {
+        font-size: 9px;
+        line-height: 1.8;
+    }
+}

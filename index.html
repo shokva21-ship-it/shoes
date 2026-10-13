@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeVerse — Oyoq kiyimlar do‘koni</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ust">
+        <span>🚚 $100 dan yuqori buyurtmalarga bepul yetkazish</span>
+        <span>💎 Tanlangan oyoq kiyimlarga 50% chegirma</span>
+        <span>🔥 Har hafta yangi kolleksiya</span>
+    </div>
+
+    <header class="bosh">
+        <a class="logo" href="#">👟 Shoe<span>Verse</span></a>
+        <nav class="nav">
+            <a class="faol" href="#bosh">Bosh sahifa</a>
+            <a href="#mahsulot">Do‘kon</a>
+            <a href="#brend">Brendlar</a>
+            <a href="#aksiya">Aksiyalar</a>
+            <a href="#aloqa">Aloqa</a>
+        </nav>
+        <div class="amallar">
+            <input id="qidir" type="search" placeholder="Oyoq kiyim qidirish...">
+            <button id="yurak" aria-label="Sevimlilar">♡</button>
+            <button id="savatbtn" aria-label="Savatcha">🛒 <b id="son">0</b></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="qahramon" id="bosh">
+            <div class="matn">
+                <span class="belgi">🔥 YANGI KOLLEKSIYA</span>
+                <h1>Har qadamda<br><span>o‘z uslubing!</span></h1>
+                <p>Har bir kun va har bir uslub uchun zamonaviy krossovkalar. Qulaylik, sifat va dizayn — barchasi bir joyda.</p>
+                <div class="tugmalar">
+                    <a class="asosiy" href="#mahsulot">Xarid qilish →</a>
+                    <a class="ikkinchi" href="#brend">Brendlarni ko‘rish</a>
+                </div>
+            </div>
+            <div class="rasm">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=90" alt="Zamonaviy sport oyoq kiyimi">
+                <div class="yorliq">YANGI<br><strong>2026</strong></div>
+            </div>
+        </section>
+
+        <section class="kategor">
+            <button class="tanla faol" data-tur="Barchasi">👟<strong>Barchasi</strong><small>250+ mahsulot</small></button>
+            <button class="tanla" data-tur="Erkaklar">👨<strong>Erkaklar</strong><small>120+ mahsulot</small></button>
+            <button class="tanla" data-tur="Ayollar">👩<strong>Ayollar</strong><small>90+ mahsulot</small></button>
+            <button class="tanla" data-tur="Bolalar">🧒<strong>Bolalar</strong><small>60+ mahsulot</small></button>
+            <button class="tanla" data-tur="Yugurish">🏃<strong>Yugurish</strong><small>80+ mahsulot</small></button>
+            <button class="tanla" data-tur="Basketbol">🏀<strong>Basketbol</strong><small>70+ mahsulot</small></button>
+            <button class="tanla" data-tur="Kundalik">✨<strong>Kundalik</strong><small>50+ mahsulot</small></button>
+            <button class="tanla" data-tur="Sayohat">⛰️<strong>Sayohat</strong><small>40+ mahsulot</small></button>
+        </section>
+
+        <section class="bolim" id="mahsulot">
+            <div class="sarlavha">
+                <h2>Ommabop mahsulotlar</h2>
+                <span id="natija">Eng yaxshi tanlovlar</span>
+            </div>
+            <div class="mahsulotlar" id="royxat">
+                <article class="karta" data-nom="Nike Air Force 1" data-tur="Erkaklar Kundalik">
+                    <button class="sevim" aria-label="Sevimliga qo‘shish">♡</button>
+                    <span class="yorliq2">TOP</span>
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=85" alt="Oq krossovka">
+                    <h3>Nike Air Force 1</h3><p>Erkaklar · Kundalik</p>
+                    <div class="past"><strong>$120</strong><span>⭐ 4.8 (1.2k)</span></div>
+                    <button class="qosh">🛒 Savatga qo‘shish</button>
+                </article>
+                <article class="karta" data-nom="Air Jordan Retro" data-tur="Erkaklar Basketbol">
+                    <button class="sevim" aria-label="Sevimliga qo‘shish">♡</button>
+                    <span class="yorliq2 yangi">YANGI</span>
+                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=85" alt="Sport krossovka">
+                    <h3>Air Jordan Retro</h3><p>Erkaklar · Basketbol</p>
+                    <div class="past"><strong>$180</strong><span>⭐ 4.9 (980)</span></div>
+                    <button class="qosh">🛒 Savatga qo‘shish</button>
+                </article>
+                <article class="karta" data-nom="New Balance 530" data-tur="Yugurish Erkaklar">
+                    <button class="sevim" aria-label="Sevimliga qo‘shish">♡</button>
+                    <span class="yorliq2">MASHHUR</span>
+                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=600&q=85" alt="Kulrang yugurish oyoq kiyimi">
+                    <h3>New Balance 530</h3><p>Erkaklar · Yugurish</p>
+                    <div class="past"><strong>$140</strong><span>⭐ 4.7 (860)</span></div>
+                    <button class="qosh">🛒 Savatga qo‘shish</button>
+                </article>
+                <article class="karta" data-nom="Vans Old Skool" data-tur="Kundalik Ayollar">
+                    <button class="sevim" aria-label="Sevimliga qo‘shish">♡</button>
+                    <span class="yorliq2 chegirma">CHEGIRMA</span>
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=85" alt="Qora kundalik oyoq kiyimi">
+                    <h3>Vans Old Skool</h3><p>Kundalik · Uniseks</p>
+                    <div class="past"><strong>$90</strong><span>⭐ 4.6 (720)</span></div>
+                    <button class="qosh">🛒 Savatga qo‘shish</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="yonma" id="brend">
+            <div class="brendlar">
+                <div class="sarlavha"><h2>Mashhur brendlar</h2><a href="#mahsulot">Barchasi →</a></div>
+                <div class="brendgrid">
+                    <div>✓ NIKE</div><div> adidas </div><div>NB</div>
+                    <div>VANS</div><div>JORDAN</div><div>CONVERSE</div>
+                </div>
+            </div>
+            <div class="obuna" id="aksiya">
+                <span>MAXSUS TAKLIF</span>
+                <h2>15% <b>chegirma</b></h2>
+                <p>Obuna bo‘ling va birinchi xaridingizda chegirmaga ega bo‘ling.</p>
+                <form id="obunaform"><input type="email" placeholder="Elektron pochtangiz" required><button>→</button></form>
+            </div>
+        </section>
+
+        <section class="afzallik">
+            <div>🚚 <strong>Bepul yetkazish</strong><small>$100 dan yuqori xaridga</small></div>
+            <div>🔒 <strong>Xavfsiz to‘lov</strong><small>Himoyalangan to‘lov tizimi</small></div>
+            <div>↩️ <strong>Oson qaytarish</strong><small>30 kun ichida</small></div>
+            <div>🎧 <strong>24/7 yordam</strong><small>Har doim yordam beramiz</small></div>
+        </section>
+    </main>
+
+    <footer id="aloqa">
+        <div class="footlogo"><a class="logo" href="#">👟 Shoe<span>Verse</span></a><p>Yaxshi oyoq kiyim. Yaxshi kayfiyat.</p></div>
+        <div><h4>Tezkor havolalar</h4><a href="#bosh">Bosh sahifa</a><a href="#mahsulot">Do‘kon</a><a href="#brend">Brendlar</a><a href="#aksiya">Aksiyalar</a></div>
+        <div><h4>Yordam</h4><a href="#aloqa">Yetkazib berish</a><a href="#aloqa">Qaytarish shartlari</a><a href="#aloqa">O‘lchamlar jadvali</a><a href="#aloqa">Savollar</a></div>
+        <div><h4>Biz bilan bog‘laning</h4><p>✉️ info@shoeverse.uz</p><p>☎️ +998 90 123 45 67</p><p>📍 Toshkent, O‘zbekiston</p></div>
+        <div class="oxiri">© 2026 ShoeVerse. Barcha huquqlar himoyalangan.</div>
+    </footer>
+
+    <div class="xabar" id="xabar"></div>
+    <script src="script.js"></script>
+</body>
+</html>
